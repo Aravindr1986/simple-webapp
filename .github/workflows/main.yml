@@ -12,8 +12,8 @@ jobs:
     - uses: azure/docker-login@v1
       with:
           login-server:${{ secrets.ACR_SERVER }}
-          username: ${{secrets.ACR_USERNAME}}
-          password: ${{ secrets.ACR_PASSWORD }}
+          username:${{ secrets.ACR_USERNAME }}
+          password:${{ secrets.ACR_PASSWORD }}
     - run: |
           docker build ./src -t {{ secrets.ACR_SERVER }}/web-app-api:latest
           docker push {{ secrets.ACR_SERVER }}/web-app-api:latest
