@@ -7,6 +7,6 @@ var app = express();
 
 app.use(cookieParser())
 app.use('/',home)
-app.use('/api/v1/users', users);
+app.use('/api/users', users);
 
 export default app;

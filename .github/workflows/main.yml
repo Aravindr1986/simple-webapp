@@ -15,7 +15,7 @@ jobs:
           username:${{ secrets.ACR_USERNAME }}
           password:${{ secrets.ACR_PASSWORD }}
     - run: |
-          docker build ./src -t {{ secrets.ACR_SERVER }}/web-app-api:latest
-          docker push {{ secrets.ACR_SERVER }}/web-app-api:latest
+          docker build ./src -t ${{ secrets.ACR_SERVER }}/web-app-api:latest
+          docker push ${{ secrets.ACR_SERVER }}/web-app-api:latest
           
           
